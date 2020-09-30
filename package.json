@@ -1,7 +1,7 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
-  "repository": "https://github.com/hummhive/poc-saltpack-keychain",
+  "repository": "https://github.com/hummhive/poc-saltpack-keypair",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
