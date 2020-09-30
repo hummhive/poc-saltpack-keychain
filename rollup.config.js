@@ -4,11 +4,15 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 
+// @see https://github.com/c0bra/svelma
+import postcss from 'rollup-plugin-postcss'
+import preprocess from 'svelte-preprocess'
+
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
 	let server;
-	
+
 	function toExit() {
 		if (server) server.kill(0);
 	}
@@ -43,8 +47,10 @@ export default {
 			// a separate file - better for performance
 			css: css => {
 				css.write('bundle.css');
-			}
+			},
+			preprocess: preprocess()
 		}),
+		postcss(),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
