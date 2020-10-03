@@ -3,35 +3,31 @@
 	import 'bulma/css/bulma.css'
 	import '@fortawesome/fontawesome-free/css/all.css'
 
- import Background from './Background.svelte'
-	import SectionSpace from './SectionSpace.svelte'
+ import Background from './layout/Background.svelte'
+	import Hero from './section/Hero.svelte'
+	import SectionSpace from './layout/SectionSpace.svelte'
+	import Overview from './section/Overview.svelte'
+	import KeyPairs from './section/KeyPairs.svelte'
+	import TweetNaCl from './section/TweetNaCl.svelte'
+	import SeedPhrase from './section/SeedPhrase.svelte'
 </script>
 
-<Background/>
+<Background />
 
-<section class="hero is-primary">
- <div class="hero-body">
-	 <div class="container">
-		 <h1 class="title">
-			 POC saltpack keypairs
-			</h1>
-	</div>
-</section>
+<Hero />
 
-<SectionSpace/>
+<SectionSpace />
 
-<section class="section white-bg">
- <div class="container">
-	 <h1 class="title">Overview</h1>
-		<h2 class="subtitle">Saltpack encryption for SPAs.</h2>
+<Overview />
 
-	 <p>
-		 <DefLink url="https://saltpack.org/" text="Saltpack"/> is an encryption format pioneered by <DefLink url="https://keybase.io/" text="Keybase" />.
-		</p>
+<SectionSpace />
 
-		<p>
-		 Saltpack is a messaging protocol that composes the primitives of <DefLink url="https://nacl.cr.yp.to/" text="NaCL" /> and <DefLink url="https://msgpack.org/index.html" text="Messagepack" />.
-		</p>
+<KeyPairs />
 
- </div>
-</section>
+<SectionSpace />
+
+<TweetNaCl />
+
+<SectionSpace />
+
+<SeedPhrase />

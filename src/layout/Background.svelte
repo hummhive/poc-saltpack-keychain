@@ -1,7 +1,7 @@
-<section id="background"></section>
+<section></section>
 
 <style>
- #background {
+ section {
   position: fixed;
   top: 0;
   right: 0;

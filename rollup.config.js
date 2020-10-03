@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import json from '@rollup/plugin-json';
 
 // @see https://github.com/c0bra/svelma
 import postcss from 'rollup-plugin-postcss'
@@ -40,6 +41,7 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		json(),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
